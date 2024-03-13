@@ -1,0 +1,54 @@
+html, body {
+    color: #cdd6f4;
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: #1e1e2e;
+}
+
+#navbar {
+    position: fixed;
+    width: 15rem;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: solid;
+    border-color: #11111b;
+    background-color: #181825;
+}
+
+#navbar ul {
+    padding: 0;
+    height: 50%;
+}
+
+#navbar li {
+    list-style: none;
+    border-top: #313244 1px solid;
+    width: 100%;
+}
+
+#navbar a {
+    color: #a6adc8;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem
+}
+
+#navbar header h1 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#main-doc {
+    position: absolute;
+    left: 15rem;
+    padding: 2rem;
+}
+
+#main-doc header h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #bac2de
+}

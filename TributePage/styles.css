@@ -1,0 +1,19 @@
+body {
+    font-family: "Segoe UI", serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 40rem;
+}
+
+#img-div {
+    padding: 10px;
+}
