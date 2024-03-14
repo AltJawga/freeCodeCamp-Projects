@@ -10,62 +10,186 @@
     <header><h1>CSS Fundamentals</h1></header>
     <ul>
         <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-        <li><a class="nav-link" href="#Targeting_Elements">Targeting Elements</a></li>
+        <li><a class="nav-link" href="#Targeting_Tags">Targeting Tags</a></li>
         <li><a class="nav-link" href="#Targeting_Classes_and_IDs">Targeting Classes and IDs</a></li>
+        <li><a class="nav-link" href="#Specificity">Specificity</a></li>
         <li><a class="nav-link" href="#Media_Queries">Media Queries</a></li>
-        <li><a class="nav-link" href="#Pseudo_Selectors">Pseudo Selectors</a></li>
     </ul>
 </nav>
 <main id="main-doc">
-    <section class="main-section" id="Introduction">
-        <header><h2>Introduction</h2></header>
-        <p></p>
-        <p></p>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </section>
-    <section class="main-section" id="Targeting_Elements">
-        <header><h2>Targeting Elements</h2></header>
-        <article>
-            <p></p>
-            <p></p>
-            <code></code>
-        </article>
-    </section>
-    <section class="main-section" id="Targeting_Classes_and_IDs">
-        <header><h2>Targeting Classes and IDs</h2></header>
-        <article>
+    <div id="main-div">
+        <section class="main-section" id="Introduction">
+            <header><h2>Introduction</h2></header>
+            <p>CSS (Cascading Style Sheets) is the code that allows you to style your websites.
+                It is not a programming or markup language, instead it is a style sheet language.</p>
+            <p>You apply styles using rulesets. These rulesets can target your HTML elements
+                in many different ways which will be discussed further down. You can see some examples of rulesets
+                below:</p>
+
+            <!--List of code blocks that are preformatted-->
             <ul>
+                <!--Preformatted code section-->
                 <li>
-                    <p></p>
-                    <code></code>
+                    <pre><code>p {
+    color: #fff;
+}</code></pre>
                 </li>
+                <!--Preformatted code section end-->
+
+                <!--Preformatted code section-->
                 <li>
-                    <p></p>
-                    <code></code>
+                    <pre><code>.example-class {
+    background-color: black;
+}</code></pre>
                 </li>
+                <!--Preformatted code section end-->
+
+                <!--Preformatted code section-->
+                <li>
+                    <pre><code>#example-id {
+    font-weight: bold;
+}</code></pre>
+                </li>
+                <!--Preformatted code section end-->
             </ul>
-        </article>
-    </section>
-    <section class="main-section" id="Media_Queries">
-        <header><h2>Media Queries</h2></header>
-        <article>
-            <p></p>
-            <p></p>
-            <code></code>
-        </article>
-    </section>
-    <section class="main-section" id="Pseudo_Selectors">
-        <header><h2>Pseudo Selectors</h2></header>
-        <article>
-            <p></p>
-            <p></p>
-            <code></code>
-        </article>
-    </section>
+            <!--End of code blocks-->
+
+        </section>
+        <section class="main-section" id="Targeting_Tags">
+            <header><h2>Targeting Tags</h2></header>
+            <article>
+                <p>HTML tags are the basic building block of HTML code. These include the
+                    &lt;p&gt;, &lt;html&gt;, and &lt;img&gt; tags alongside many more. Targeting
+                    these tags is the simplest method of applying styles, but it is also the least specific.</p>
+                <p>For more info on specificity, look at the <a href="#Specificity">specificity</a> section below</p>
+                <p>An example ruleset targeting an HTML tag (From this website!) is shown below:</p>
+
+                <!--Preformatted code section-->
+                <pre><code>code {
+    background-color: #313244;
+    display: block;
+    padding: 0.5rem;
+    margin: 0.5rem auto 0.5rem auto;
+    border-radius: 10px;
+    width: 75%;
+    font-family: monospace;
+}</code></pre>
+                <!--Preformatted code section end-->
+
+            </article>
+        </section>
+        <section class="main-section" id="Targeting_Classes_and_IDs">
+            <header><h2>Targeting Classes and IDs</h2></header>
+            <article>
+                <section id="Targeting_Classes">
+                    <p>In HTML, you can assign classes to elements using the "class" attribute.
+                        Classes should be assigned to multiple related elements.</p>
+                    <p>You can target these classes by placing a . in front of the class name in CSS. An
+                        example of this is shown below:</p>
+
+                    <!--Preformatted code section-->
+                    <pre><code>.main-section ul {
+    padding: 0;
+}</code></pre>
+                    <!--Preformatted code section end-->
+                </section>
+
+                <section id="Targeting_IDs">
+                    <p>You can also assign IDs to elements in HTML using the "id" attribute.
+                        IDs should only be assigned to one unique element.</p>
+                    <p>You can target IDs by placing a # in front of the ID name in CSS. An example
+                        of this is shown below:</p>
+
+                    <!--Preformatted code section-->
+                    <pre><code>#main-doc {
+    position: absolute;
+    left: 15rem;
+    padding: 2rem;
+}</code></pre>
+                    <!--Preformatted code section end-->
+                </section>
+            </article>
+        </section>
+        <section class="main-section" id="Specificity">
+            <header><h2>Specificity</h2></header>
+            <article>
+                <p>CSS assigns importance on styles based on specificity. The more specific the element you
+                    are targeting is, the higher priority the style will apply. For example, styles applied to a class
+                    will take precedence over one applied to a tag and styles applied to an ID will take precedence over
+                    one applied to a class.</p>
+                <p>In the example code blocks below, only the "padding: 0" style will be applied for an element with a
+                    &lt;p&gt; tag, an "example" class, and an "example" ID.</p>
+
+                <!--List of code blocks that are preformatted-->
+                <ul>
+                    <!--Preformatted code section-->
+                    <li>
+                    <pre><code>p {
+    padding: 2rem;
+}</code></pre>
+                    </li>
+                    <!--Preformatted code section end-->
+
+                    <!--Preformatted code section-->
+                    <li>
+                    <pre><code>.example {
+    padding: 1rem;
+}</code></pre>
+                    </li>
+                    <!--Preformatted code section end-->
+
+                    <!--Preformatted code section-->
+                    <li>
+                    <pre><code>#example {
+    padding: 0;
+}</code></pre>
+                    </li>
+                    <!--Preformatted code section end-->
+                </ul>
+                <!--End of code blocks-->
+
+            </article>
+        </section>
+        <section class="main-section" id="Media_Queries">
+            <header><h2>Media Queries</h2></header>
+            <article>
+                <p>With the rapid adoption of smartphones placing an access point to the web in everyone's pockets,
+                    responsive web development has become all but necessary. CSS allows adjusting styles through the use
+                    of media queries in which you can set certain styles to only apply given certain requirements.</p>
+                <p>An example of this changing this website's style on smaller devices is shown below:</p>
+
+                <!--Preformatted code section-->
+                <pre><code>@media (max-width: 768px) {
+    #navbar {
+        background-color: #181825;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 200px;
+        border: none;
+        z-index: 1;
+        border-bottom: #11111b solid;
+    }
+
+    #navbar ul {
+        height: 70%;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    #main-doc {
+        position: absolute;
+        top: 210px;
+    }
+}</code></pre>
+                <!--Preformatted code section end-->
+            </article>
+        </section>
+
+    </div>
 </main>
 </body>
 </html>

@@ -4,26 +4,39 @@ html, body {
     background-color: #1e1e2e;
 }
 
-#navbar {
-    position: fixed;
-    width: 15rem;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-right: solid;
-    border-color: #11111b;
-    background-color: #181825;
+code {
+    background-color: #313244;
+    display: block;
+    padding: 0.5rem;
+    margin: 0.5rem auto 0.5rem auto;
+    border-radius: 10px;
+    width: 75%;
+    font-family: monospace;
 }
 
-#navbar ul {
+p {
+    line-height: 1.5rem;
+}
+
+p a {
+    color: #89b4fa;
+}
+
+.main-section ul {
     padding: 0;
-    height: 50%;
 }
 
 #navbar li {
     list-style: none;
     border-top: #313244 1px solid;
     width: 100%;
+}
+
+#navbar header h1 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #navbar a {
@@ -34,21 +47,80 @@ html, body {
     font-size: 1.1rem
 }
 
-#navbar header h1 {
-    text-align: center;
-    margin: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#main-doc {
-    position: absolute;
-    left: 15rem;
-    padding: 2rem;
-}
-
-#main-doc header h2 {
+#main-div header h2 {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #bac2de
+    color: #bac2de;
+}
+
+#main-div li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    #navbar {
+        position: fixed;
+        width: 250px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-right: solid;
+        border-color: #11111b;
+        background-color: #181825;
+    }
+    #navbar ul {
+        padding: 0;
+        height: 50%;
+    }
+
+    #main-doc {
+        position: absolute;
+        left: 250px;
+        padding: 1rem;
+    }
+
+    #main-div {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        background-color: #181825;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 18vh;
+        border: none;
+        z-index: 1;
+        border-bottom: #11111b solid;
+    }
+
+    #navbar ul {
+        padding: 0;
+        height: 70%;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    #main-doc {
+        position: absolute;
+        top: 210px;
+    }
+}
+
+@media (max-width: 268px) {
+    #navbar ul {
+        height: 50%;
+    }
+
+    #main-doc {
+        width: 95vw;
+    }
 }
