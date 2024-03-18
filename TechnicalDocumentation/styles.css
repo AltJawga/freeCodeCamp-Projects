@@ -96,7 +96,7 @@ p a {
         padding: 0;
         margin: 0;
         width: 100%;
-        height: 18vh;
+        height: 20vh;
         border: none;
         z-index: 1;
         border-bottom: #11111b solid;
@@ -111,7 +111,7 @@ p a {
 
     #main-doc {
         position: absolute;
-        top: 210px;
+        top: 21vh;
     }
 }
 
