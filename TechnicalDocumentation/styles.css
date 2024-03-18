@@ -116,11 +116,16 @@ p a {
 }
 
 @media (max-width: 268px) {
+    #navbar {
+        height: 25vh;
+    }
+
     #navbar ul {
         height: 50%;
     }
 
     #main-doc {
+        top: 26vh;
         width: 95vw;
     }
 }
